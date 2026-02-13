@@ -449,21 +449,27 @@ body {
   justify-content: center;
   gap: 20px;
   padding-top: 40px;
-  padding-bottom: 60px;  /* Pastga joy berish uchun */
+  padding-bottom: 60px;
 }
 
 .pro-buttons button {
-  padding: 8px 29px;
+  padding: 10px 29px;
   background-color: #fff;
   border: none;
   border-radius: 20px;
   font-size: 16px;
   font-family: "Fredoka", cursive;
-  font-weight: 600;
+  font-weight: 700;
   color: #000;
   border: 0.5px solid #969696;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.active_btn {
+  background-color: #f379a7 !important;
+  color: #fff !important;
+  border: 1px solid #f379a7 !important;
 }
 
 .pro-buttons button:hover {
@@ -484,10 +490,11 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(252, 231, 240);
-  height: 477px;
+  background-image: url("/assets/img/bg1.webp");
+  height: 550px;
   position: relative;
   overflow: visible;
-  max-height: 477px;
+  max-height: 550px;
   margin-top: 100px;
 }
 
@@ -508,7 +515,7 @@ body {
 
 .boy-img, .girl-img {
   position: relative;
-  top: 200px;
+  top: 283px;
 }
 
 .boy-img img, .girl-img img {
@@ -540,7 +547,7 @@ body {
 
 .dis-round-img-1 {
   position: relative;
-  bottom: -38px;
+  bottom: -111px;
   right: 0;
   z-index: 2 !important;
   width: 100%;
@@ -548,6 +555,8 @@ body {
 
 .dis-text {
   text-align: center;
+  position: relative;
+  top: 65px;
 }
 
 .dis-text h2 {
@@ -863,6 +872,7 @@ body {
   padding: 50px 0;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .carousel-products {
@@ -899,7 +909,7 @@ body {
   width: 193px;
   height: 165px;
   left: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 90px;
 }
 
 
@@ -907,13 +917,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 50%;
   visibility: hidden;
 }
 
@@ -926,6 +934,16 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 5px;
+  border: none;
+  background-color: #f379a7;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.pro-card-overlay button:hover {
+  background-color: #7eb5e0;
+
 }
 
 .product-info {
@@ -949,6 +967,12 @@ body {
   color: #3b3a3a;
   text-decoration: none;
   font-family: 'Rubik', sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+.product-info a:hover {
+  color: #f379a7;
+  transition: all 0.3s ease-in;
 }
 
 .product-cost {
@@ -1213,4 +1237,130 @@ body {
 .footer-bottom .highlight {
   color: #f379a7;
   font-weight: 600;
+}
+
+#product-info-3 {
+  left: -15px;
+}
+
+#product-info-4 {
+  left: -15px;
+}
+
+#gallery-card {
+  background-color: #e4f6fe;
+  width: 300px;
+  height: 445px;
+
+}
+
+.gallery-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 307px;
+  position: relative;
+}
+
+.gallery-card-info {
+  padding-left: 25px;
+  height: 136px;
+  position: absolute;
+  top: 320px;
+}
+
+.gallery-card-info a {
+  text-decoration: none;
+  color: #3B3A3A;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-card-info a:hover {
+  color: #f379a7;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-card-info p {
+  padding-top: 20px;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: #3B3A3A;
+}
+
+
+
+.gallery-card:hover .product-action {
+  visibility: visible;
+}
+.product-action i {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f379a7;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(25px); /* Pastdan yuqoriga chiqish uchun */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastik effekt */
+}
+
+
+
+#gallery-card {
+  position: relative;
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.product-action {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+  position: relative;
+  bottom: 130px;
+}
+
+#gallery-card:hover .product-action i {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#gallery-card:hover .product-action i:nth-child(1) { transition-delay: 0.1s; }
+#gallery-card:hover .product-action i:nth-child(2) { transition-delay: 0.2s; }
+#gallery-card:hover .product-action i:nth-child(3) { transition-delay: 0.3s; }
+#gallery-card:hover .product-action i:nth-child(4) { transition-delay: 0.4s; }
+
+.product-action i:hover {
+  background-color: #95b3e0;
+  color: white;
+  border-color: #95b3e0;
+}
+
+.product-action i {
+  transition-delay: 0s;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+  gap: 35px;
+  justify-items: center;
+  align-items: center;
+  padding-left: 320px;
+  padding-right: 320px;
+  padding-top: 90px;
 }

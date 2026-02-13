@@ -244,11 +244,41 @@ class MiniTitle {
       <h2>${this.title}</h2>
       <p>${this.paragraph}</p>
       <div class="pro-buttons">
-        <button>${this.button1}</button>
+        <button class="active_btn">${this.button1}</button>
         <button>${this.button2}</button>
         <button>${this.button3}</button>
       </div>
     </div>
+    `
+  }
+}
+class Gallery{
+  constructor(img, star, name, cost) {
+    this.img = img
+    this.star = star
+    this.name = name
+    this.cost = cost
+  }
+
+  generateHTML() {
+    return `
+      <div id="gallery-card">
+        <div class="gallery-product">
+          <img src="${this.img}" alt="${this.name}">
+        </div>
+        <div class="product-action">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-expand"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </div>
+        <div class="gallery-card-info">
+          <span>${this.star}</span> <br>
+          <a href="index.html">${this.name}</a>
+          <p>${this.cost}</p>
+        </div>
+      </div>
+
     `
   }
 }
@@ -317,11 +347,12 @@ class Collection {
 }
 
 class CarouselProducts {
-  constructor(product, name, cost, productClass) {
+  constructor(product, name, cost, productClass, productInfoId) {
     this.product = product
     this.name = name
     this.cost = cost
     this.productClass = productClass
+    this.productInfoId = productInfoId
   }
 
   generateHTML() {
@@ -335,7 +366,7 @@ class CarouselProducts {
               <button class="fa-solid fa-heart"></button>
               <button class="fa-solid fa-arrow-right-arrow-left"></button>
             </div>
-            <div class="product-info">
+            <div class="product-info" id="${this.productInfoId}">
               <div class="rating">
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
@@ -660,6 +691,70 @@ class User {
     })
   }
 
+  displayGallery() {
+    const galleryData = [
+      {
+        img: '/assets/productImgs/1.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Funskool Teddy',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/2.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Baby Play Sets',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/3.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Jigsaw Puzzles For Kids',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/4.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Abstract Girl Dress',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/5.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Bruder Toys Mini Ships',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/6.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Abstract Boy Dress',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/7.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Funskool Teddy Pink',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/productImgs/8.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Toys Box For Baby',
+        cost: '$190.12',
+      },
+    ]
+
+    if (!this.mainDiv) return
+
+    const gallerySection = document.createElement("section");
+    gallerySection.classList.add("gallery");
+    this.mainDiv.appendChild(gallerySection)
+
+    galleryData.forEach((data) => {
+      const galleryObj = new Gallery(data.img, data.star, data.name, data.cost)
+      gallerySection.innerHTML += galleryObj.generateHTML();
+    })
+  }
+
   displayDiscount() {
     const discountData = [
       {
@@ -743,24 +838,28 @@ class User {
         name: 'Newborn Kit Set',
         cost: '$190.12',
         productClass: 'car-product-1',
+        productInfoId: "product-info-1"
       },
       {
         product: '/assets/products/product2.webp',
         name: 'Classic Fisher Gift',
         cost: '$190.12',
         productClass: 'car-product-2',
+        productInfoId: "product-info-2"
       },
       {
         product: '/assets/products/product3.webp',
         name: 'Sassy Crib and Floor Mirror',
         cost: '$190.12',
         productClass: 'car-product-3',
+        productInfoId: "product-info-3"
       },
       {
         product: '/assets/products/product4.webp',
         name: 'Sassy Crib and Floor Mirror',
         cost: '$190.12',
         productClass: 'car-product-4',
+        productInfoId: "product-info-4",
       },
     ]
 
@@ -775,7 +874,8 @@ class User {
         data.product,
         data.name,
         data.cost,
-        data.productClass
+        data.productClass,
+        data.productInfoId
       )
       carouselSection.innerHTML += carouselProductsObj.generateHTML()
     })
@@ -854,6 +954,7 @@ document.addEventListener('DOMContentLoaded', () => {
   user.displayNavbarItems()
   user.displayProducts()
   user.displayMinitleTitle()
+  user.displayGallery()
   user.displayDiscount()
   user.displayCOllection()
   user.displayCarouselProducts()
