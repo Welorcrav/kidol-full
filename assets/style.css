@@ -1364,3 +1364,36 @@ body {
   padding-right: 320px;
   padding-top: 90px;
 }
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slider i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #7eb5e0;
+  justify-content: center;
+  align-content: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.slider i:hover {
+  background-color: #f379a7;
+  transition: all 0.3s ease-in;
+}
+
+
+.slider-btns {
+  display: flex;
+  position: relative;
+  top: 245px;
+  gap: 1400px;
+  color: #fff;
+}
