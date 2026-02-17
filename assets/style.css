@@ -31,7 +31,7 @@ body {
   gap: 15px;
 }
 
-.contact-one p{
+.contact-one p {
   transition: all 0.3s ease-in-out;
 }
 
@@ -342,7 +342,6 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-
 .product-img {
   position: absolute;
   right: 0;
@@ -390,7 +389,6 @@ body {
   width: 60%;
 }
 
-
 #navbar {
   transition: all 0.3s ease-in-out;
 }
@@ -437,8 +435,8 @@ body {
 
 #mini-title p {
   font-size: 16px;
-  font-family: "Rubik", sans-serif;
-  color: #2D2D2D;
+  font-family: 'Rubik', sans-serif;
+  color: #2d2d2d;
   letter-spacing: 0.3px;
   line-height: 30px;
 }
@@ -458,7 +456,7 @@ body {
   border: none;
   border-radius: 20px;
   font-size: 16px;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
   font-weight: 700;
   color: #000;
   border: 0.5px solid #969696;
@@ -485,12 +483,11 @@ body {
   border: 0.5px solid #f379a7;
 }
 
-
 .discount {
   display: flex;
   justify-content: center;
   background-color: rgb(252, 231, 240);
-  background-image: url("/assets/img/bg1.webp");
+  background-image: url('/assets/img/bg1.webp');
   height: 550px;
   position: relative;
   overflow: visible;
@@ -513,12 +510,14 @@ body {
   overflow: visible;
 }
 
-.boy-img, .girl-img {
+.boy-img,
+.girl-img {
   position: relative;
   top: 283px;
 }
 
-.boy-img img, .girl-img img {
+.boy-img img,
+.girl-img img {
   position: relative;
   bottom: 200px;
   z-index: 1;
@@ -567,7 +566,7 @@ body {
 
 .dis-text p {
   font-size: 18px;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
   color: #000000;
   font-weight: 600;
   padding-bottom: 70px;
@@ -591,7 +590,7 @@ body {
   border-radius: 30px;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
   font-size: 16px;
   position: relative;
   left: 100px;
@@ -648,7 +647,7 @@ body {
 
 .collection-discount p {
   font-size: 18px;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
   font-weight: 600;
   padding-bottom: 50px;
 }
@@ -671,9 +670,9 @@ body {
   border-radius: 20px;
   color: #fff;
   text-decoration: none;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
   font-weight: 600;
-  transition:  all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .collection-discount a:hover {
@@ -744,7 +743,6 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-
 .product-img {
   position: absolute;
   right: 0;
@@ -792,7 +790,6 @@ body {
   bottom: 5px;
   width: 60%;
 }
-
 
 .product-card-carousel {
   display: flex;
@@ -864,7 +861,6 @@ body {
   font-family: 'Fredoka', cursive;
 }
 
-
 .carousel-product {
   width: 300px;
   height: 430px;
@@ -912,7 +908,6 @@ body {
   margin-bottom: 90px;
 }
 
-
 .pro-card-overlay {
   display: flex;
   justify-content: center;
@@ -943,7 +938,6 @@ body {
 
 .pro-card-overlay button:hover {
   background-color: #7eb5e0;
-
 }
 
 .product-info {
@@ -976,7 +970,7 @@ body {
 }
 
 .product-cost {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #3b3a3a;
@@ -1025,7 +1019,6 @@ body {
   width: 370px;
 }
 
-
 .blog-image {
   width: 100%;
   height: 250px;
@@ -1057,7 +1050,7 @@ body {
 }
 
 .blog-author {
-  color: #Adadad;
+  color: #adadad;
   font-size: 16px;
 }
 
@@ -1109,12 +1102,10 @@ body {
   background-color: #f379a7;
 }
 
-
-
 .footer {
   background-color: #5a5a5a;
   color: #fff;
-  font-family: "Fredoka", cursive;
+  font-family: 'Fredoka', cursive;
 }
 
 .footer-top {
@@ -1251,7 +1242,6 @@ body {
   background-color: #e4f6fe;
   width: 300px;
   height: 445px;
-
 }
 
 .gallery-product {
@@ -1271,8 +1261,8 @@ body {
 
 .gallery-card-info a {
   text-decoration: none;
-  color: #3B3A3A;
-  font-family: "Rubik", sans-serif;
+  color: #3b3a3a;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 500;
   position: relative;
@@ -1288,12 +1278,10 @@ body {
 .gallery-card-info p {
   padding-top: 20px;
   font-size: 18px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  color: #3B3A3A;
+  color: #3b3a3a;
 }
-
-
 
 .gallery-card:hover .product-action {
   visibility: visible;
@@ -1313,8 +1301,6 @@ body {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastik effekt */
 }
 
-
-
 #gallery-card {
   position: relative;
   width: 300px;
@@ -1323,7 +1309,6 @@ body {
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
-
 
 .product-action {
   display: flex;
@@ -1339,10 +1324,18 @@ body {
   transform: translateY(0);
 }
 
-#gallery-card:hover .product-action i:nth-child(1) { transition-delay: 0.1s; }
-#gallery-card:hover .product-action i:nth-child(2) { transition-delay: 0.2s; }
-#gallery-card:hover .product-action i:nth-child(3) { transition-delay: 0.3s; }
-#gallery-card:hover .product-action i:nth-child(4) { transition-delay: 0.4s; }
+#gallery-card:hover .product-action i:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#gallery-card:hover .product-action i:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#gallery-card:hover .product-action i:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#gallery-card:hover .product-action i:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
 .product-action i:hover {
   background-color: #95b3e0;
@@ -1389,11 +1382,56 @@ body {
   transition: all 0.3s ease-in;
 }
 
-
 .slider-btns {
   display: flex;
   position: relative;
   top: 245px;
   gap: 1400px;
   color: #fff;
+}
+
+/* ── Navigation buttons ── */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 42px !important;
+  height: 42px !important;
+  background: #c5d9f0 !important;
+  border-radius: 50% !important;
+  top: 42% !important;
+}
+
+.swiper-button-prev {
+  left: 12px !important;
+}
+.swiper-button-next {
+  right: 12px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #5a7fa8 !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #a8c4e0 !important;
+}
+
+/* disabled state */
+.swiper-button-disabled {
+  opacity: 0.3 !important;
+  cursor: not-allowed !important;
+}
+
+.swiper-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 70px;
+  position: relative;
+}
+
+.swiper {
+  overflow: hidden !important;
 }
