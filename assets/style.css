@@ -1390,7 +1390,7 @@ body {
   color: #fff;
 }
 
-/* ── Navigation buttons ── */
+
 .swiper-button-prev,
 .swiper-button-next {
   width: 42px !important;
@@ -1419,16 +1419,10 @@ body {
   background: #a8c4e0 !important;
 }
 
-/* disabled state */
-.swiper-button-disabled {
-  opacity: 0.3 !important;
-  cursor: not-allowed !important;
-}
-
 .swiper-section {
-  max-width: 1300px;
+  max-width: 1340px;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 50px;
   position: relative;
 }
 

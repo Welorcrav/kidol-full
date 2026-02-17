@@ -862,19 +862,59 @@ class User {
 
   displayCarouselProducts() {
     const carouselProductsData = [
-      { img: '/assets/products/product1.webp', star: '★★★★★', name: 'Funskool Teddy Brown',       cost: '$190.12' },
-      { img: '/assets/products/product2.webp', star: '★★★★★', name: 'Newborn Kit Set',             cost: '$190.12' },
-      { img: '/assets/products/product3.webp', star: '★★★★★', name: 'Classic Fisher Gift',         cost: '$190.12' },
-      { img: '/assets/products/product4.webp', star: '★★★★★', name: 'Sassy Crib and Floor Mirror', cost: '$190.12' },
-      { img: '/assets/products/product1.webp', star: '★★★★★', name: 'Funskool Teddy Brown',       cost: '$190.12' },
-      { img: '/assets/products/product2.webp', star: '★★★★★', name: 'Newborn Kit Set',             cost: '$190.12' },
-      { img: '/assets/products/product3.webp', star: '★★★★★', name: 'Classic Fisher Gift',         cost: '$190.12' },
-      { img: '/assets/products/product4.webp', star: '★★★★★', name: 'Sassy Crib and Floor Mirror', cost: '$190.12' },
+      {
+        img: '/assets/products/product1.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Funskool Teddy Brown',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product2.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Newborn Kit Set',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product3.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Classic Fisher Gift',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product4.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Sassy Crib and Floor Mirror',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product1.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Funskool Teddy Brown',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product2.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Newborn Kit Set',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product3.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Classic Fisher Gift',
+        cost: '$190.12',
+      },
+      {
+        img: '/assets/products/product4.webp',
+        star: '⭐⭐⭐⭐⭐',
+        name: 'Sassy Crib and Floor Mirror',
+        cost: '$190.12',
+      },
     ]
 
     if (!this.mainDiv) return
 
-    const section = document.createElement('div')
+    const section = document.createElement('section')
     section.classList.add('swiper-section')
 
     const swiperDiv = document.createElement('div')
@@ -883,31 +923,26 @@ class User {
     const wrapper = document.createElement('div')
     wrapper.classList.add('swiper-wrapper')
 
-    carouselProductsData.forEach(data => {
+    carouselProductsData.forEach((data) => {
+      const slide = document.createElement('div')
+      slide.classList.add('swiper-slide')
       const obj = new CarouselProducts(data.img, data.star, data.name, data.cost)
-      wrapper.innerHTML += obj.generateHTML()
+      slide.innerHTML = obj.generateHTML()
+      wrapper.appendChild(slide)
     })
-
-    const prevBtn = document.createElement('div')
-    const nextBtn = document.createElement('div')
-    prevBtn.classList.add('swiper-button-prev')
-    nextBtn.classList.add('swiper-button-next')
 
     swiperDiv.appendChild(wrapper)
     section.appendChild(swiperDiv)
-    section.appendChild(prevBtn)
-    section.appendChild(nextBtn)
-
     this.mainDiv.appendChild(section)
 
     new Swiper('.mySwiper', {
       slidesPerView: 4,
       slidesPerGroup: 1,
       spaceBetween: 20,
-      loop: false,
+      loop: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#slider-right',
+        prevEl: '#slider-left',
       },
     })
   }
